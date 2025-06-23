@@ -256,10 +256,34 @@ body {
     line-height: 1.6;
 }
 
+/* Imagine Section */
+.imagine {
+    padding: 80px 0;
+    background: #f8f9fa;
+}
+
+.imagine-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.imagine-content p {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.imagine-content p:last-child {
+    margin-bottom: 0;
+}
+
 /* Problem Section */
 .problem {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .problem-grid {
@@ -306,7 +330,54 @@ body {
 /* Solution Section */
 .solution {
     padding: 100px 0;
+    background: #f8f9fa;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
     background: white;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-top: 48px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-card {
+    background: #f8f9fa;
+    padding: 40px 32px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border-color: #d1d5db;
+}
+
+.testimonial-card blockquote {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.testimonial-card cite {
+    font-size: 16px;
+    color: #6b7280;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .services-grid {
@@ -764,10 +835,15 @@ body {
     
     .problem-grid,
     .services-grid,
+    .testimonials-grid,
     .process-steps,
     .packages-grid {
         grid-template-columns: 1fr;
         gap: 24px;
+    }
+    
+    .imagine-content p {
+        font-size: 20px;
     }
     
     .package-card.featured {
@@ -793,8 +869,10 @@ body {
         font-size: 2rem;
     }
     
+    .imagine,
     .problem,
     .solution,
+    .testimonials,
     .process,
     .packages {
         padding: 80px 0;
@@ -840,11 +918,17 @@ body {
         font-size: 1.8rem;
     }
     
+    .imagine,
     .problem,
     .solution,
+    .testimonials,
     .process,
     .packages {
         padding: 60px 0;
+    }
+    
+    .imagine-content p {
+        font-size: 18px;
     }
     
     .final-cta {
