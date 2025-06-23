@@ -79,22 +79,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Navbar scroll effect
-    let lastScrollTop = 0;
+    // Navbar scroll effect - add background on scroll
     const navbar = document.querySelector('.nav');
     
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
+        if (scrollTop > 50) {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.backdropFilter = 'blur(15px)';
         } else {
-            // Scrolling up
-            navbar.style.transform = 'translateY(0)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(10px)';
         }
-        
-        lastScrollTop = scrollTop;
     });
     
     // Intersection Observer for animations
@@ -215,7 +212,7 @@ style.textContent = `
         }
         
         .nav {
-            transition: transform 0.3s ease;
+            /* Always visible */
         }
     }
 `;
